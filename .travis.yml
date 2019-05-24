@@ -1,3 +1,8 @@
 language: node_js
 script:
     - npm run lint
+deploy:
+   provider: script
+   script: bash scripts/push.sh
+   on:
+     branch: master
